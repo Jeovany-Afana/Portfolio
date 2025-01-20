@@ -1,0 +1,831 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Meta -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<!-- SITE TITLE -->
+		<title>Portfolio- Joe AFANA</title>
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,600,700,700i,800,900" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,600,700,800,900" rel="stylesheet">
+		<link href="fonts/font-awesome.min.css" rel="stylesheet"/>
+		<link href="fonts/etline.css" rel="stylesheet"/>
+		<link href="fonts/themify-icons.css" rel="stylesheet"/>
+		<link href="css/plugins.css" rel="stylesheet"/>
+		<link href="css/lightbox.min.css" rel="stylesheet"/>
+		<link href="css/responsive.css" rel="stylesheet"/>
+		<link href="css/style.css" rel="stylesheet"/>
+		<link rel="icon" type="image/png" href="./images/Joe/image_Joe.jpg">
+		
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
+
+		<![endif]-->
+
+		<style>
+			#portfolio .box img {
+    width: 100%; /* S'assure que les images remplissent le conteneur */
+    height: 200px; /* Hauteur fixe pour toutes les images */
+    object-fit: cover; /* Maintient les proportions tout en remplissant le conteneur */
+    border-radius: 5px; /* Ajoute des coins légèrement arrondis pour un effet esthétique */
+}
+
+
+/* Section portfolio styles */
+.section_padding {
+    padding: 50px 15px; /* Ajuste le padding général de la section */
+}
+
+.work_content_area {
+    display: flex;
+    flex-wrap: wrap; /* Permet un bon comportement responsive */
+    justify-content: space-between; /* Ajoute un espacement uniforme */
+    gap: 20px; /* Espace entre les colonnes */
+}
+
+.element-item {
+    flex: 1 1 calc(100% - 20px); /* Largeur par défaut pour petits écrans */
+    max-width: calc(100% - 20px); /* Limite la largeur pour éviter le débordement */
+    margin-bottom: 20px; /* Espace vertical entre les éléments */
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+    .element-item {
+        flex: 1 1 calc(50% - 20px); /* Deux colonnes sur écran moyen */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (min-width: 992px) {
+    .element-item {
+        flex: 1 1 calc(25% - 20px); /* Quatre colonnes sur écran large */
+        max-width: calc(25% - 20px);
+    }
+}
+
+/* Box styling */
+.box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre douce */
+}
+
+.box img {
+    width: 100%;
+    height: auto; /* Garde les proportions des images */
+    display: block;
+}
+
+.box_content_area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Fond semi-transparent */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.box:hover .box_content_area {
+    opacity: 1; /* Affiche le contenu au survol */
+}
+
+.hover_content h5 {
+    font-size: 1.25rem;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.hover_content span {
+    font-size: 0.875rem;
+    color: #ddd;
+}
+
+.icon a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.icon a:hover {
+    color: #00bcd4; /* Change la couleur de l'icône au survol */
+}
+
+
+		</style>
+	</head>
+	
+	<body data-spy="scroll" data-target=".navbar" data-offset="70">
+
+		<!-- START PRELOADER -->
+			<div class="preloader dark_preloader">
+				<div class="spinner">
+					<div class="double-bounce1"></div>
+					<div class="double-bounce2"></div>
+				</div>
+			</div>
+		<!-- END PRELOADER -->
+		
+		<!-- START NAVBAR -->
+			<div class="navbar navbar-default navbar-fixed-top menu-top dark_bg_menu">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a href="dark-index.html" class="navbar-brand"><img src="images/Joe/joe_logo-removebg-preview.png" alt="logo"></a>
+					</div>
+					<div id="navbar" class="navbar-collapse collapse">
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="#home" class="smoothScroll">Accueil</a></li>
+							<li><a href="#about" class="smoothScroll">À propos</a></li>
+							<li><a href="#service" class="smoothScroll">Services</a></li>
+							<li><a href="#portfolio" class="smoothScroll">Travail</a></li>
+							<li><a href="#resume" class="smoothScroll">Résumé</a></li>	
+							<li><a href="#blog" class="smoothScroll">Blog</a></li>													
+							<li><a href="#contact" class="smoothScroll">Me contacter</a></li>
+						</ul>
+					</div> 
+				</div><!--- END CONTAINER -->
+			</div> 
+		<!-- END NAVBAR -->			
+		
+		<!-- START BANNER-SHOW -->
+			<section id="home" class="main_banner banner_bg_2">
+				<div class="display_table">
+					<div class="display_table_cell">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="banner_content text-center">
+										<span class="sm_title">Bienvenue!</span>
+										<h1 class="cd-headline clip">
+											<span class="fw_300">Je suis </span>
+											<span class="cd-words-wrapper">
+												<b class="is-visible fw_800">Joe AFANA</b>
+												<b class="fw_800">Développeur web</b>
+												<b class="fw_800">Formateur</b>
+												<b class="fw_800">Passioné de technologie</b>
+											</span>
+										</h1>
+										<div class="sub_title">
+											<span>Développeur</span> 
+											<span>Enseignant</span>
+											<span>Freelancer</span> 
+										</div>
+										<ul class="banner_social_link">					
+											<li><a href="#0"><i class="fa fa-facebook"></i></a></li>
+											<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+											<li><a href="#"><i class="fa fa-linkedin"></i></a></li>		
+											<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+											<li><a href="#"><i class="fa fa-behance"></i></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mouse_scroll">
+					<a href="#about" class="smoothScroll">
+						<div class="mouse">
+							<i class="ti-angle-double-down"></i>
+						</div>
+					</a>
+				</div>
+			</section>
+		<!-- END BANNER-SHOW -->
+		
+		<!-- START ABOUT -->
+			<section id="about" class="dark_bg_1 section_padding">
+				<div class="container">	
+					<div class="row">
+						<div class="col-md-5 col-sm-12 col-xs-12">
+							<div class="about_img">
+								<img src="images/./Joe/IMG-20250119-WA0007.jpg" alt="about-img" />
+							</div>
+						</div>
+						<div class="col-md-7 col-sm-12 col-xs-12">
+							<div class="about_content_area">
+								<h5>Moi c'est Jeovany Wilfred AFANA</h5>
+								<h3>Développeur Web Passionné avec une Expertise en Formation et Freelance</h3>
+<p>Développeur web dédié, passionné par la technologie et l'innovation, avec une solide expérience dans la création de projets dynamiques et fonctionnels. J'accompagne également des apprenants en tant que formateur, tout en offrant mes services en freelance pour répondre à des besoins variés. Toujours prêt à relever de nouveaux défis et à transformer des idées en solutions numériques efficaces.</p>
+
+								<div class="about_me">
+                                    <div class="name">
+                                        <span>Nom Complet</span>
+                                        M. Jeovany Wilfred AFANA
+                                    </div>
+                                    <div class="age">
+                                        <span>Âge</span>
+                                        22 ans
+                                    </div>
+                                    <div class="Address">
+                                        <span>Adresse:</span>
+                                        Sénégal, Thies - Lalane
+                                    </div>
+                                    <div class="phone">
+                                        <span>Numéro de téléphone</span>
+										+221 77 493 16 23
+                                    </div>
+                                    <div class="email">
+                                        <span>Email</span>
+                                        <a href="#">wilfrieddylan451@gmail.com</a>
+                                    </div>
+                                </div>
+
+								<div class="about_btn">
+									<a href="#" class="btn btn-default main_btn contact_btn dark_bg_btn">Contactez-moi</a>
+									<a href="#" class="btn btn-default contact_number dark_cn">+221 77 493 16 23</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		<!-- END ABOUT -->
+		
+		<!-- START SERVICE -->
+		<section id="service" class="dark_bg_2 section_padding pb_70">
+			<div class="container">
+				<div class="dark_heading section_heading text-center">
+					<h2>Mes Services</h2>
+					<p>Je propose une gamme de services pour répondre à vos besoins en développement web et en technologie. Avec une approche personnalisée, je m'assure que chaque projet est unique et parfaitement adapté à vos objectifs.</p>
+				</div>
+				
+				<div class="row text-center">
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<div class="service_slider owl-carousel">
+							<div class="single_service">
+								<div class="service_icon">
+									<i class="ti-desktop"></i>
+								</div>
+								<h4>Développement Web</h4>
+								<p>Création de sites web modernes, dynamiques et optimisés pour tous les appareils.</p>
+							</div>
+							<div class="single_service">
+								<div class="service_icon">
+									<i class="ti-light-bulb"></i>
+								</div>
+								<h4>Formation</h4>
+								<p>Sessions personnalisées pour apprendre JavaScript, React, et bien plus encore.</p>
+							</div>
+							<div class="single_service">
+								<div class="service_icon">
+									<i class="ti-hand-open"></i>
+								</div>
+								<h4>Freelance</h4>
+								<p>Solutions sur mesure pour vos projets numériques, de l'idée à la réalisation.</p>
+							</div>
+							<div class="single_service">
+								<div class="service_icon">
+									<i class="ti-shield"></i>
+								</div>
+								<h4>Applications Mobiles</h4>
+								<p>Développement d'applications mobiles fonctionnelles et intuitives.</p>
+							</div>
+							<div class="single_service">
+								<div class="service_icon">
+									<i class="ti-pencil-alt"></i>
+								</div>
+								<h4>Design Responsive</h4>
+								<p>Création de designs adaptatifs pour une expérience utilisateur optimale.</p>
+							</div>
+							<div class="single_service">
+								<div class="service_icon">
+									<i class="ti-server"></i>
+								</div>
+								<h4>Backend & API</h4>
+								<p>Développement de serveurs robustes et intégration d'API performantes.</p>
+							</div>
+						</div>
+					</div> <!-- End Col -->
+				</div>
+			</div>
+		</section>
+		
+		<!-- END SERVICE -->
+		
+		<!-- START PORTFOLIO -->
+<section id="portfolio" class="dark_bg_1 section_padding">
+    <div class="dark_heading section_heading text-center">
+        <h2>Mon Portfolio</h2>
+        <p>Découvrez une sélection de mes projets, allant du développement web à des solutions personnalisées pour répondre à des besoins variés.</p>
+    </div>
+    
+    <div class="work_filter text-center wow fadeInDown">
+        <ul>
+            <li class="active" data-filter="*">Tous</li>
+            <li data-filter=".web-dev">Développement Web</li>
+            <li data-filter=".mobile-app">Applications Mobiles</li>
+            <li data-filter=".formation">Formation</li>
+        </ul>
+    </div>
+    
+    <div class="row">    
+        <div class="work_content_area">
+            <!-- Projet 1 -->
+            <div class="col-md-3 col-sm-12 col-xs-12 padding_0 element-item web-dev">
+                <div class="box">
+                    <img src="images/Joe/logo.PNG" alt="Campus Inspect" />
+                    <div class="box_content_area">
+                        <div class="hover_content">
+                            <h5>Campus Inspect</h5>
+                            <span>Application de gestion des étudiants</span>
+                            <div class="icon">
+                                <a href="https://campus-inspect.netlify.app"><i class="ti-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Projet 2 -->
+            <div class="col-md-3 col-sm-12 col-xs-12 padding_0 element-item mobile-app">
+                <div class="box">
+                    <img src="./images/Joe/joe_dact.png" alt="Yoga App" />
+                    <div class="box_content_area">
+                        <div class="hover_content">
+                            <h5>Joe Dact</h5>
+                            <span>Application web pour l'apprentissage de la dactylographie</span>
+                            <div class="icon">
+                                <a href="#"><i class="ti-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Projet 3 -->
+            <div class="col-md-3 col-sm-12 col-xs-12 padding_0 element-item formation">
+                <div class="box">
+                    <img src="images/Joe/photo_formation.png" alt="Formation JavaScript" />
+                    <div class="box_content_area">
+                        <div class="hover_content">
+                            <h5>Formation JavaScript</h5>
+                            <span>Sessions de formation interactives</span>
+                            <div class="icon">
+                                <a href="https://plateforme-etudiants.netlify.app"><i class="ti-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Projet 4 -->
+            <div class="col-md-3 col-sm-12 col-xs-12 padding_0 element-item web-dev">
+                <div class="box">
+                    <img src="images/Joe/chronometre.png" alt="Gestion de Contenus" />
+                    <div class="box_content_area">
+                        <div class="hover_content">
+                            <h5>Système de Gestion de TEMPS</h5>
+                            <span>Outil complet pour gérer le temps pendant les exames et les devoirs au sein du campus.</span>
+                            <div class="icon">
+                                <a href="#"><i class="ti-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="port_content_button text-center">
+            <a href="#" class="btn btn-default main_btn dark_bg_btn">Charger plus</a>
+        </div>
+    </div>        
+</section>
+<!-- END PORTFOLIO -->
+
+						
+		<!-- START COUNTER -->
+<section id="counter_area" class="bg-gray-100 section_padding py-20">
+    <div class="container mx-auto">
+        <div class="row text-center flex flex-wrap">
+            <!-- Counter 1 -->
+            <div class="w-full sm:w-1/2 lg:w-1/4 mb-8 px-4">
+                <div class="single_counter">
+                    <div class="icon text-blue-500 text-5xl mb-4">
+                        <i class="icon-happy"></i>
+                    </div>
+                    <span class="counter text-4xl font-bold text-gray-800">10</span>
+                    <p class="text-gray-600 text-lg mt-2">Clients Satisfaits</p>
+                </div>
+            </div>
+
+            <!-- Counter 2 -->
+            <div class="w-full sm:w-1/2 lg:w-1/4 mb-8 px-4">
+                <div class="single_counter">
+                    <div class="icon text-green-500 text-5xl mb-4">
+                        <i class="icon-briefcase"></i>
+                    </div>
+                    <span class="counter text-4xl font-bold text-gray-800">+20</span>
+                    <p class="text-gray-600 text-lg mt-2">Projets Réalisés</p>
+                </div>
+            </div>
+
+            <!-- Counter 3 -->
+            <div class="w-full sm:w-1/2 lg:w-1/4 mb-8 px-4">
+                <div class="single_counter">
+                    <div class="icon text-yellow-500 text-5xl mb-4">
+                        <i class="icon-trophy"></i>
+                    </div>
+                    <span class="counter text-4xl font-bold text-gray-800">3</span>
+                    <p class="text-gray-600 text-lg mt-2">Contrats Signés</p>
+                </div>
+            </div>
+
+            <!-- Counter 4 -->
+            <div class="w-full sm:w-1/2 lg:w-1/4 mb-8 px-4">
+                <div class="single_counter">
+                    <div class="icon text-red-500 text-5xl mb-4">
+                        <i class="icon-profile-male"></i>
+                    </div>
+                    <span class="counter text-4xl font-bold text-gray-800">5</span>
+                    <p class="text-gray-600 text-lg mt-2">Membres dans mon équipe</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END COUNTER -->
+
+		
+	<!-- START RESUME -->	
+<!-- START RESUME -->	
+<section id="resume" class="bg-black text-white section_padding pb-20">
+    <div class="container mx-auto">
+        <div class="section_heading text-center mb-12">
+            <h2 class="text-3xl font-bold">Mon CV</h2>
+            <p class="text-gray-300 text-lg mt-2">
+                Découvrez mon parcours académique et professionnel, illustrant mes compétences et expériences.
+            </p>
+        </div>	
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <!-- Education Section -->
+            <div>
+                <div class="resume-container">
+                    <h3 class="text-2xl font-semibold mb-6">
+                        <i class="icon-trophy text-yellow-500 mr-2"></i>Éducation
+                    </h3>
+                    <div class="space-y-6">
+                        <!-- Single Education Item -->
+                        <div class="single_resume bg-gray-800 p-6 shadow-lg rounded-lg">
+                            <strong class="text-yellow-500">2022</strong>
+                            <h5 class="text-xl font-semibold mt-2">Début de mon apprentissage de l'informatique (Génie Logiciel)</h5>
+                            <p class="text-gray-300 mt-2">
+                                Études approfondies en informatique, avec un focus sur le développement de logiciels, les bases de données et les algorithmes.
+                            </p>
+                        </div>
+                        <!-- Single Education Item -->
+                        <div class="single_resume bg-gray-800 p-6 shadow-lg rounded-lg">
+                            <strong class="text-yellow-500">2023 - 2024</strong>
+                            <h5 class="text-xl font-semibold mt-2">Apprentissage de la conception d'applications FullStack et réalisation de projets</h5>
+                            <p class="text-gray-300 mt-2">
+                                Formation spécialisée en développement web avec des projets utilisant des frameworks modernes comme React, Laravel, et Firebase.
+                            </p>
+                        </div>
+                        <!-- Single Education Item -->
+                        <div class="single_resume bg-gray-800 p-6 shadow-lg rounded-lg">
+                            <strong class="text-yellow-500">2025</strong>
+                            <h5 class="text-xl font-semibold mt-2">Initiation à DevOps et perfectionnement en Flutter</h5>
+                            <p class="text-gray-300 mt-2">
+                                Exploration des pratiques de DevOps pour le déploiement et la gestion de projets cloud, tout en approfondissant le développement d’applications mobiles avec Flutter.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Experience Section -->
+            <div>
+                <div class="resume-container">
+                    <h3 class="text-2xl font-semibold mb-6">
+                        <i class="icon-briefcase text-yellow-500 mr-2"></i>Expérience
+                    </h3>
+                    <div class="space-y-6">
+                        <!-- Single Experience Item -->
+                        <div class="single_resume bg-gray-800 p-6 shadow-lg rounded-lg">
+                            <strong class="text-yellow-500">2022 - 2023</strong>
+                            <h5 class="text-xl font-semibold mt-2">Développeur Débutant</h5>
+                            <p class="text-gray-300 mt-2">
+                                Découverte des concepts fondamentaux de la programmation avec JavaScript, et mise en œuvre de petits projets personnels pour acquérir une expérience pratique.
+                            </p>
+                        </div>
+                        <!-- Single Experience Item -->
+                        <div class="single_resume bg-gray-800 p-6 shadow-lg rounded-lg">
+                            <strong class="text-yellow-500">2024</strong>
+                            <h5 class="text-xl font-semibold mt-2">Création de l'application Campus Inspect</h5>
+                            <p class="text-gray-300 mt-2">
+                                Développement d’une application permettant de suivre la solvabilité des étudiants avec des fonctionnalités QR code, Firebase, et Laravel. Projet réalisé pour améliorer l'efficacité administrative des établissements.
+                            </p>
+                        </div>
+                        <!-- Single Experience Item -->
+                        <div class="single_resume bg-gray-800 p-6 shadow-lg rounded-lg">
+                            <strong class="text-yellow-500">2024 - Présent</strong>
+                            <h5 class="text-xl font-semibold mt-2">Responsable de Projet - Application Mobile pour le Commerce</h5>
+                            <p class="text-gray-300 mt-2">
+                                Gestion d'un projet d'application mobile visant à simplifier les commandes commerciales en Mauritanie. Supervision du cycle complet, de la conception au déploiement, avec des fonctionnalités clés adaptées au marché local.
+                            </p>
+                        </div>
+                        <!-- Single Experience Item -->
+                        <div class="single_resume bg-gray-800 p-6 shadow-lg rounded-lg">
+                            <strong class="text-yellow-500">2024 - Présent</strong>
+                            <h5 class="text-xl font-semibold mt-2">Formateur et Développeur Freelance</h5>
+                            <p class="text-gray-300 mt-2">
+                                Formation des étudiants en JavaScript, React, et développement web, tout en travaillant sur des projets clients en tant que développeur freelance.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END RESUME -->
+
+<!-- END RESUME -->
+
+
+		
+		<!-- START CTA -->
+<section class="cta_section dark_overlay section_padding bg-black text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="cta_content">
+                    <h3 class="text-3xl font-bold mb-6">Besoin d'un Développeur ou Formateur Freelance ?</h3>
+                    <p class="text-lg text-gray-300 mb-6">
+                        Je suis disponible pour collaborer sur vos projets web et mobiles. Ensemble, concrétisons vos idées en solutions performantes et innovantes.
+                    </p>
+                    <a href="mailto:wilfrieddylan451@gmail.com" class="btn btn-default main_btn bg-yellow-500 hover:bg-yellow-600 text-black px-8 py-4 rounded-lg shadow-lg">
+                        <span>Me Contacter</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END CTA -->
+
+		<!-- START TESTIMONIALS -->
+<section id="testimonial_area" class="dark_bg_2 section_padding">
+    <div class="container mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-white" style="color: white;">Ce que disent mes clients et Associés</h2>
+            <p class="text-gray-300 text-lg mt-2">
+                Découvrez les retours de mes clients et collaborateurs sur mes prestations.
+            </p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="testimonial_area owl-carousel">
+                    <!-- Testimonial 1 -->
+                    <div class="single_testimonial bg-gray-800 p-6 rounded-lg shadow-lg">
+                        <p class="description text-gray-300 italic">
+                            "Grâce à son expertise, nous avons pu développer une application mobile parfaitement adaptée à nos besoins commerciaux. Professionnel et à l'écoute, je le recommande vivement !"
+                        </p>
+                        <div class="pic mt-4">
+                            <img src="images/testimonial/1.jpg" alt="Client 1" class="w-16 h-16 rounded-full mx-auto">
+                        </div>
+                        <h5 class="title text-yellow-500 font-semibold mt-4">Fatima Ndiaye</h5>
+                        <span class="post text-gray-400 text-sm">Responsable Marketing</span>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="single_testimonial bg-gray-800 p-6 rounded-lg shadow-lg">
+                        <p class="description text-gray-300 italic">
+                            "Ses compétences en développement web et mobile ont permis de créer une plateforme robuste et évolutive. Une collaboration réussie à chaque étape du projet."
+                        </p>
+                        <div class="pic mt-4">
+                            <img src="images/testimonial/2.jpg" alt="Client 2" class="w-16 h-16 rounded-full mx-auto">
+                        </div>
+                        <h5 class="title text-yellow-500 font-semibold mt-4">Aliou Ba</h5>
+                        <span class="post text-gray-400 text-sm">Entrepreneur</span>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="single_testimonial bg-gray-800 p-6 rounded-lg shadow-lg">
+                        <p class="description text-gray-300 italic">
+                            "Un formateur patient et compétent qui m'a aidé à mieux comprendre le JavaScript. Ses explications claires et ses exercices pratiques sont top !"
+                        </p>
+                        <div class="pic mt-4">
+                            <img src="images/testimonial/3.jpg" alt="Client 3" class="w-16 h-16 rounded-full mx-auto">
+                        </div>
+                        <h5 class="title text-yellow-500 font-semibold mt-4">Mustafa  Diop</h5>
+                        <span class="post text-gray-400 text-sm">Etudiant</span>
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div class="single_testimonial bg-gray-800 p-6 rounded-lg shadow-lg">
+                        <p class="description text-gray-300 italic">
+                            "Son implication et sa créativité ont fait de notre application un succès. Il a su intégrer toutes nos demandes dans les délais impartis."
+                        </p>
+                        <div class="pic mt-4">
+                            <img src="images/testimonial/4.jpg" alt="Client 4" class="w-16 h-16 rounded-full mx-auto">
+                        </div>
+                        <h5 class="title text-yellow-500 font-semibold mt-4">Ousmane Sow</h5>
+                        <span class="post text-gray-400 text-sm">Chef de Projet</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END TESTIMONIALS -->
+
+		
+		<!-- START BLOG -->
+<section id="blog" class="dark_bg_1 section_padding pb_70">
+    <div class="container">
+        <div class="dark_heading section_heading text-center">
+            <h2>Mon Blog</h2>
+            <p>
+                Explorez mes articles sur le développement web, le mobile et des conseils pour réussir vos projets.
+            </p>
+        </div>	
+            
+        <div class="row">
+            <div class="blog_slide_area">
+                <!-- Article 1 -->
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="single_blog">
+                        <div class="blog-thumb">
+                            <div class="blog-image">
+                                <img src="images/Joe/FirebaseJS.png" class="blog-fixed-size" alt="">
+                            </div>
+                            <div class="blog-info">
+                                <small><i class="fa fa-clock-o"></i>15 Janvier 2025</small>
+                                <span>| Développement Web</span>
+                                <a href="#"><h4>Créer une application de gestion avec JavaScript et Firebase</h4></a>
+                                <p>
+                                    Découvrez comment développer une application performante de gestion avec des fonctionnalités en temps réel grâce à JavaScript et Firebase.
+                                </p>
+                                <a href="#" class="btn btn-default blog_btn main_btn dark_bg_btn">Lire Plus</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Article 2 -->
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="single_blog">
+                        <div class="blog-thumb">
+                            <div class="blog-image">
+                                <img src="images/Joe/afficheFormation.jpg" class="blog-fixed-size" alt="">
+                            </div>
+                            <div class="blog-info">
+                                <small><i class="fa fa-clock-o"></i>20 Janvier 2025</small>
+                                <span>| Formation</span>
+                                <a href="#"><h4>10 Conseils pour Apprendre JavaScript Efficacement</h4></a>
+                                <p>
+                                    Des astuces pratiques pour améliorer vos compétences en JavaScript, que vous soyez débutant ou développeur intermédiaire.
+                                </p>
+                                <a href="#" class="btn btn-default blog_btn main_btn dark_bg_btn">Lire Plus</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Article 3 -->
+                <!-- Article 3 -->
+<div class="col-md-4 col-sm-6 col-xs-12">
+    <div class="single_blog">
+        <div class="blog-thumb">
+            <div class="blog-image">
+                <img src="images/Joe/logo-vertical.png" class="img-responsive" alt="">
+            </div>
+            <div class="blog-info">
+                <small><i class="fa fa-clock-o"></i>25 Janvier 2025</small>
+                <span>| Développement Web</span>
+                <a href="#"><h4>Créer une Plateforme avec JavaScript et Firebase</h4></a>
+                <p>
+                    Apprenez à concevoir une plateforme web performante avec JavaScript pour le frontend et Firebase pour la gestion en temps réel des données.
+                </p>
+                <a href="#" class="btn btn-default blog_btn main_btn dark_bg_btn">Lire Plus</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END BLOG -->
+
+
+		
+		<!-- START CONTACT -->
+<section id="contact" class="dark_bg_2 section_padding">
+    <div class="container">
+        <div class="dark_heading section_heading text-center">
+            <h2>Contactez-Moi</h2>
+            <p>
+                Vous avez un projet ou une question ? N'hésitez pas à me contacter. Je suis disponible pour discuter et collaborer.
+            </p>
+        </div>	
+            
+        <div class="row">
+            <!-- Contact Details -->
+            <div class="col-md-3 col-sm-4 col-xs-12">
+                <div class="contact_details pb_0">
+                    <div class="single_contact">
+                        <i class="fa fa-map-marker"></i>
+                        <h5>Adresse</h5>
+                        <p>Thies, Sénégal</p>
+                    </div>
+                    <div class="single_contact">
+                        <i class="fa fa-envelope"></i>
+                        <h5>Email</h5>
+                        <p>wilfrieddylan451@gmail.com</p>
+                    </div>
+                    <div class="single_contact">
+                        <i class="fa fa-phone"></i>
+                        <h5>Téléphone</h5>
+                        <p>+221 77 493 16 23</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Form -->
+            <div class="col-md-9 col-sm-8 col-xs-12">
+                <div class="contact">
+                    <form id="contact-form" method="post" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="input_padding text-center">
+                                <div class="form-group col-sm-6">
+                                    <input type="text" name="name" class="form-control" id="first-name" placeholder="Votre Nom *" required="required">
+                                </div>
+                                <div class="form-group col-sm-6">
+                                    <input type="email" name="email" class="form-control" id="email" placeholder="Votre Email *" required="required">
+                                </div>
+                                <div class="form-group col-sm-12">
+                                    <input type="text" name="subject" class="form-control" id="subject" placeholder="Sujet *" required="required">
+                                </div>
+                                <div class="form-group col-sm-12 mab-none">
+                                    <textarea rows="8" name="message" class="form-control" id="description" placeholder="Votre Message Ici ..." required="required"></textarea>
+                                </div>
+                                <div class="form-group mb0 col-sm-12">
+                                    <div class="actions">
+                                        <button type="submit" value="Envoyer le Message" name="submit" id="submitButton" class="btn btn-default main_btn dark_bg_btn" title="Cliquez ici pour envoyer votre message !">Envoyer le Message</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div><!-- END COL -->
+        </div><!--- END ROW -->	
+    </div><!--- END CONTAINER -->
+</section>
+<!-- END CONTACT -->
+
+		<!-- START FOOTER -->
+			<div class="footer">
+				<div class="container">
+					<div class="copy-text">
+						<p>CopyRight © 2025 Jeovany Wilfred AFANA Tous Droits  Réservés</p>
+					</div>
+				</div>						
+			</div>	
+		<!-- END FOOTER -->
+		
+		<!-- Latest jQuery -->
+			<script src="js/jquery.min.js"></script>
+			<script src="js/bootstrap.min.js"></script>
+			<script src="js/owl.carousel.min.js"></script>
+			<script src="js/modernizr-2.8.3.min.js"></script>
+			<script src="js/jquery.inview.min.js"></script>
+			<script src="js/isotope.pkgd.min.js"></script>
+			<script src="js/animated-headline.js"></script>
+			<script src="js/lightbox.min.js"></script>
+			<script src="js/SmoothScroll.js"></script>
+			<script src="js/form-contact.js"></script>
+			<script src="js/jquery.hoverdir.js"></script>
+			<script src="js/scrolltopcontrol.js"></script>
+			<script src="js/wow.min.js"></script>
+			<script type="text/javascript">
+				$(function() {
+				
+					$(' .box ').each( function() { $(this).hoverdir({
+						hoverDelay : 50,
+						inverse : true
+					}); } );
+
+				});
+			</script>
+			<script src="js/main.js"></script>
+	</body>
+</html>		
