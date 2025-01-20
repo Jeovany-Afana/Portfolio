@@ -817,6 +817,64 @@
 		<!-- END FOOTER -->
 		
 		<!-- Latest jQuery -->
+
+        <script type="module">
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js"; // Pour initialiser l'application Firebase
+import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore.js"; // Pour utiliser Firestore
+
+// Configuration Firebase
+const firebaseConfig = {
+  apiKey: "AIzaSyAG3YjB9eHus-19dlMaL_NwL9Ye6UEGsRk",
+  authDomain: "portfolio-de789.firebaseapp.com",
+  projectId: "portfolio-de789",
+  storageBucket: "portfolio-de789.firebasestorage.app",
+  messagingSenderId: "694487267768",
+  appId: "1:694487267768:web:a17624d687cbfad46bf74d",
+  measurementId: "G-3QPSNYQ3SP"
+};
+
+// Initialiser Firebase et Firestore
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+// Gestionnaire de soumission du formulaire
+document.getElementById("contact-form").addEventListener("submit", async function (event) {
+    event.preventDefault(); // Empêche le rechargement de la page
+
+    // Récupérer les données du formulaire
+    const name = document.getElementById("first-name").value;
+    const email = document.getElementById("email").value;
+    const subject = document.getElementById("subject").value;
+    const message = document.getElementById("description").value;
+
+    // Validation simple
+    if (!name || !email || !subject || !message) {
+        alert("Veuillez remplir tous les champs.");
+        return;
+    }
+
+    try {
+        // Ajouter une nouvelle demande dans Firestore
+        await addDoc(collection(db, "Demandes"), {
+            name: name,
+            email: email,
+            subject: subject,
+            message: message,
+            timestamp: new Date() // Ajouter un horodatage
+        });
+
+        // Afficher un message de succès
+        alert("Votre message a été envoyé avec succès !");
+        
+        // Réinitialiser le formulaire
+        document.getElementById("contact-form").reset();
+    } catch (error) {
+        console.error("Erreur lors de l'envoi du message : ", error);
+        alert("Une erreur s'est produite. Veuillez réessayer plus tard.");
+    }
+});
+
+        </script>
 			<script src="js/jquery.min.js"></script>
 			<script src="js/bootstrap.min.js"></script>
 			<script src="js/owl.carousel.min.js"></script>
